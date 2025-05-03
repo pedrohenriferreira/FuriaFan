@@ -1,0 +1,157 @@
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(255, 215, 0, 0.6));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(255, 215, 0, 0.6));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Animações personalizadas */
+@keyframes pulse-gold {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.gold-highlight {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.furia-gradient {
+  background: linear-gradient(135deg, #000000 0%, #242424 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+}
+
+/* Botões interativos */
+button.interactive {
+  position: relative;
+  overflow: hidden;
+}
+
+button.interactive:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: width 0.3s;
+}
+
+button.interactive:hover:after {
+  width: 100%;
+}
+
+/* Efeito de hover para cards */
+.hover-card-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-card-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(255, 215, 0, 0.1), 0 4px 6px -4px rgba(255, 215, 0, 0.1);
+}
+
+/* Animação para o jogador favorito */
+@keyframes favorite-highlight {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  }
+}
+
+.favorite-player-animation {
+  animation: favorite-highlight 2s infinite;
+}
+
+/* Animação de escala para interações */
+.scale-on-hover {
+  transition: transform 0.2s ease;
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para barras de progresso */
+.progress-bar-animate {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-animate::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30px;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.3) 50%, 
+    rgba(255,255,255,0) 100%);
+  animation: progress-shine 2s infinite;
+}
+
+@keyframes progress-shine {
+  0% {
+    left: -30px;
+  }
+  100% {
+    left: 100%;
+  }
+}
