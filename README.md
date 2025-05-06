@@ -35,3 +35,4 @@ cd FuriaFan
 npm i
 npm run dev
 ```
+acesse em: https://furia-fan-zeta.vercel.app/
